@@ -1,0 +1,11 @@
+<launch>
+  <node name="cartographer_assets_writer" pkg="cartographer_ros" required="true"
+      type="cartographer_assets_writer" args="
+          -configuration_directory $(find turtlebot3_slam)/config
+          -configuration_basename assets_writer_turtlebot3_2d_ros_map.lua
+          -urdf_filename $(find turtlebot3_description)/urdf/turtlebot3_waffle_pi.urdf.xacro
+          -bag_filenames $(arg bag_filenames)
+          -pose_graph_filename $(arg pose_graph_filename)"
+      output="screen">
+  </node>
+</launch>

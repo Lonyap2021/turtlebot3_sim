@@ -1,0 +1,13 @@
+obstacle_range: 3.0
+raytrace_range: 3.0
+footprint: [[0.005, 0.005], [0.005, -0.005], [-0.005, -0.005], [-0.005, 0.005]]
+footprint_inflation: 0.005
+inflation_radius: 0.4
+max_obstacle_height: 5.0
+min_obstacle_height: 0.0
+observation_sources: scan #point_cloud_sensor
+scan: {sensor_frame: base_scan, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+map_type: costmap
+#point_cloud_sensor: {sensor_frame: camera_link, data_type: PointCloud2, topic: /camera/depth/points, marking: true, clearing: true}
+# static_layer:
+#   map_topic: /map_nav
